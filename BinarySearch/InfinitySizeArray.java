@@ -2,7 +2,7 @@ package BinarySearch;
 
 public class InfinitySizeArray {
     public static void main(String [] args){
-        int[] arr = {1 , 2 , 3 , 5 , 6 , 7 , 8 , 10 , 11 , 12 , 15 , 20 , 23 , 30};
+        int[] arr = {1 , 2 , 3 , 5 , 6 , 7 , 8 , 10 , 11 , 12 , 15 , 20 , 23 , 30 , 31};
         int target = 15;
         System.out.print("The Postion of the Array : " + ans(arr , target));
     }
@@ -14,7 +14,6 @@ public class InfinitySizeArray {
             end += ( end  - start + 1) * 2;
             start = newStart;
         }
-        System.out.println(start + " " + end);
         return binarySearch(arr , target , start , end);
     }
 
