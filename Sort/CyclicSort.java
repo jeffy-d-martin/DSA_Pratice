@@ -7,11 +7,15 @@ public class CyclicSort {
     }
 
     private static int[]  cycleSort(int[] array) {
-        for( int i = 0 ; i < array.length ; i++){
-            if(array[i] != i){
-                int pos = array[i];
-                array[i] = i;
-                i = pos;
+        int i = 0 ;
+        while( i < array.length){
+            int correct = array[i];
+            if(correct != i){
+               int temp = array[correct];
+               array[correct] = array[i];
+               array[i] = temp;
+            }else{
+                i++;
             }
         }
         return array;
